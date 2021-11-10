@@ -1,0 +1,22 @@
+.container {
+    padding: 1rem;
+    background: blue;
+  }
+  
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+.button {
+    width: 150px;
+    padding: .5rem;
+    font-size: 20px;
+    outline: none;
+    background: none;
+    border: 2px solid white;
+    color: white;
+}
+  
