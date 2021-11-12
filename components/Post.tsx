@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { useRouter } from 'next/router'
 
-function Post({ post }) {
+const Post = ({ post }) => {
   const router = useRouter()
   const { pid } = router.query
   return (
@@ -10,8 +10,8 @@ function Post({ post }) {
       <h2>
         {post.title.slice(0, 12)} &rarr; {post.id}
       </h2>
-      <p>{post.body}.</p>
-      <Link href="">
+      <p>{post.body.slice(0, 45)}....</p>
+      <Link as={`/blog/${post.id}`} href="/blog/[id]">
         <a className="btn">Read More: {pid}</a>
       </Link>
     </div>
